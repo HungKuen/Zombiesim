@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Zombie sim</title>
+</head>
+<body>
+<div class="wrapper">
+<h2> Welcome to a zombie sim</h2>
+<div>It was a quiet town with 100 residents before you came, now you have plauged this town with zombies.</div>
+<div>If you want to change the outcome visit this site again.</div>
+    <div>
+        <span class="zombie">A house with a zombie will be green</span>
+        <span class="peopleInDaHouse"> A house with a living human will med blue</span>
+        <span class="emptyHouse">An empty house will have the color red</span>
+    </div>
+    <p></p>
+
+    <span th:each="house:${allHouses}" th:class="${house}">House</span>
+
+</div>
+</body>
+</html>
