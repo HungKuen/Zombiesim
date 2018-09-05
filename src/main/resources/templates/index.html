@@ -8,16 +8,18 @@
 <body>
 <div class="wrapper">
 <h2> Welcome to a zombie sim</h2>
-<div>It was a quiet town with 100 residents before you came, now you have plauged this town with zombies.</div>
-<div>If you want to change the outcome visit this site again.</div>
+<div>It was a quiet town with 100 residents before you came, now you have plagued this town with zombies.</div>
+<div>If you want to plague more towns reload this site again.</div>
     <div>
         <span class="zombie">A house with a zombie will be green</span>
-        <span class="peopleInDaHouse"> A house with a living human will med blue</span>
         <span class="emptyHouse">An empty house will have the color red</span>
+        <span>After 100 Houses a empty space shows that that a new town begins</span>
+        <div class="zombie">Numbers of rounds zombies have tried to eat brains:</div> <span th:text="${numberOfRoundsUntil101}"></span>
+        <div class="zombie">Average numbers of rounds it take zombies to overwhelm a town: </div><span th:text="${averageRoundsToOverwhelmATown}"></span>
+        <div class="zombie">Number of towns overwhelmed: </div><span th:text="${totalOfRoundsForTenTowns}"></span>
     </div>
     <p></p>
-
-    <span th:each="house:${allHouses}" th:class="${house}">House</span>
+    <span th:each="house:${allTowns}" th:class="${house}">House</span>
 
 </div>
 </body>

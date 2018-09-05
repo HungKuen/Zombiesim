@@ -9,7 +9,7 @@ import java.util.Random;
 public class ZombieRepository {
 
     List<Integer> zombieRandom = new ArrayList<>();
-    int numberOfZombies = 1;
+    public int numberOfZombies = 1;
 
     public List<String> zombiesOnTheMove(List<String> allHouses) {
 
